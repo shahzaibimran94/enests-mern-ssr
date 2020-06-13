@@ -1,5 +1,4 @@
 import http from 'http';
-import { readdir } from 'fs';
 
 let app = require('./server').default;
 
@@ -10,11 +9,6 @@ let currentApp = app;
 server
   .listen(process.env.PORT || 5000, () => {
     console.log('🚀 started');
-    readdir('./build', (err, files) => {
-      files.forEach(file => {
-        console.log(file);
-      })
-    });
   })
   .on('error', error => {
     console.log(error);
