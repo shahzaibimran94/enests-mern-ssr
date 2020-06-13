@@ -10,7 +10,7 @@ let currentApp = app;
 server
   .listen(process.env.PORT || 5000, () => {
     console.log('🚀 started');
-    readdir('./', (err, files) => {
+    readdir('./public', (err, files) => {
       files.forEach(file => {
         console.log(file);
       })
