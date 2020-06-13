@@ -13,6 +13,7 @@ server
     readdir('./', (err, files) => {
       files.forEach(file => {
         console.log(file);
+      }
     });
   })
   .on('error', error => {
